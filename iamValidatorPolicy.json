@@ -26,14 +26,14 @@
                 "s3:ListBucket"
             ],
             "Resource": [
-                "arn:aws:s3:::iam-validator-bks",
-                "arn:aws:s3:::iam-validator-bks/*"
+                "arn:aws:s3:::<your logging bucket name>",
+                "arn:aws:s3:::<your logging bucket name>/*"
             ]
         },
         {
             "Effect": "Allow",
             "Action": "sns:Publish",
-            "Resource": "arn:aws:sns:us-east-1:527274894823:iam-validation-changes"
+            "Resource": "<your sns topic arn>"
         }
     ]
 }
